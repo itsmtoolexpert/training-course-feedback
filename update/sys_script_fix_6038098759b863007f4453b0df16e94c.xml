@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <before>false</before>
+        <description>This script should be run as a script in ICE Packages. It may be copied and run from Background scripts in Global if necessary, though.</description>
+        <flush_cache>false</flush_cache>
+        <name>Set properties - ICE</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>false</run_once>
+        <script><![CDATA[//SET THESE VALUES FOR EACH ICE PACKAGE
+
+var agile_product_name = '';
+var agile_product_release = '';
+var curriculum_developer = '';
+
+// __APPLICATION PROPERTIES _______________________________________________
+
+var prefix = 'x_snc_train_feedbk';
+var scope_display = 'Training Course Feedback';
+var scope_sys_id = '5db21047597863007f4453b0df16e9cb';
+var defect_endpoint = 'https://trainingdev.service-now.com/api/now/import/x_snc_tac_defect_m_defect_ws';
+var enhancement_endpoint = 'https://trainingdev.service-now.com/api/now/import/x_snc_tac_defect_m_enhancement_ws';
+
+
+//_DEFECT ENDPOINT ________________________________________________________
+
+var gr = new GlideRecord("sys_properties");
+gr.initialize(); 
+gr.name = this.prefix + '.defect_endpoint'; 
+gr.description = 'Training Course Feedback - Defect Endpoint';
+gr.type = 'string';
+gr.sys_scope.setDisplayValue(scope_display);
+gr.value = defect_endpoint;
+gr.insert();
+
+
+//_ENHANCEMENT ENDPOINT ________________________________________________________
+
+var gr = new GlideRecord("sys_properties");
+gr.initialize(); 
+gr.name = this.prefix + '.enhancement_endpoint'; 
+gr.description = 'Training Course Feedback - Enhancement Endpoint';
+gr.type = 'string';
+gr.sys_scope.setDisplayValue(prefix);
+gr.sys_scope = scope_sys_id;
+gr.value = enhancement_endpoint;
+gr.insert();
+
+//_AGILE PRODUCT NAME ________________________________________________________
+
+var gr = new GlideRecord("sys_properties");
+gr.initialize(); 
+gr.name = this.prefix + '.agile_product_name'; 
+gr.description = 'Training Course Feedback - Agile Product Name';
+gr.type = 'string';
+gr.sys_scope.setDisplayValue(scope_display);
+gr.value = agile_product_name;
+gr.insert();
+
+//_AGILE PRODUCT RELEASE NAME ________________________________________________________
+
+var gr = new GlideRecord("sys_properties");
+gr.initialize(); 
+gr.name = this.prefix + '.agile_product_release'; 
+gr.description = 'Training Course Feedback - Agile Product Release Name';
+gr.type = 'string';
+gr.sys_scope.setDisplayValue(scope_display);
+gr.value = agile_product_release;
+gr.insert();
+
+//_ CURRICULUM DEVELOPER ________________________________________________________
+
+var gr = new GlideRecord("sys_properties");
+gr.initialize(); 
+gr.name = this.prefix + '.curriculum_developer'; 
+gr.description = 'Training Course Feedback - Curriculum Developer';
+gr.type = 'string';
+gr.sys_scope.setDisplayValue(scope_display);
+gr.value = curriculum_developer;
+gr.insert();]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 14:29:27</sys_created_on>
+        <sys_id>6038098759b863007f4453b0df16e94c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Set properties - ICE</sys_name>
+        <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+        <sys_update_name>sys_script_fix_6038098759b863007f4453b0df16e94c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-01 16:54:39</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

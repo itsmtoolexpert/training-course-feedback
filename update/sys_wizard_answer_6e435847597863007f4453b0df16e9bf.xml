@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>Training Course Feedback</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Training Course Feedback</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">cc6e85b61b210010b46f4375cc4bcb96</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 10:29:18</sys_created_on>
+        <sys_id>6e435847597863007f4453b0df16e9bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Training Course Feedback</sys_name>
+        <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+        <sys_update_name>sys_wizard_answer_6e435847597863007f4453b0df16e9bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-01 10:29:18</sys_updated_on>
+        <table/>
+        <target_url>x_snc_train_feedbk_feedback.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

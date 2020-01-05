@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_producer">
+    <sc_cat_item_producer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <can_cancel>false</can_cancel>
+        <category display_value="Quick Links">91a9e0510a0a3c7401d20d86782fc9a0</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Submit Training Course Feedback</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture/>
+        <post_insert_script/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=a1f6f0cf597863007f4453b0df16e9d1&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <redirect_url>generated_record</redirect_url>
+        <request_method/>
+        <roles/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <script><![CDATA[var sourceurl = gs.getProperty('glide.servlet.uri');
+var substringfound = sourceurl.indexOf("instructor");
+var trimmedsourceurl = sourceurl.substring(0,sourceurl.length - 1);
+var property_prefix = 'x_snc_train_feedbk';
+
+current.agile_product = gs.getProperty(this.property_prefix + '.agile_product_name');
+current.agile_product_release = gs.getProperty(this.property_prefix + '.agile_product_release');
+current.lab_name = gs.getProperty('klabs.classname');
+current.source_instance_url = sourceurl;
+current.submission_timestamp = current.opened_at;
+
+if (gs.getProperty('glide.servlet.uri').indexOf("instructor") !=-1) {
+	current.validation_timestamp = new GlideDateTime();
+	current.state = -51;
+	gs.addInfoMessage("Thank you. Feedback automatically validated since the source URL is the instructor instance.  Please add a workaround if provided to the class and submit to the Curriculum Developer.");
+	
+} else //running on student instance
+{
+	gs.addInfoMessage("Thank you. Your feedback has been submitted to your instructor for validation.");
+}
+
+]]></script>
+        <short_description>Submit Training Course Feedback</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item_producer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 13:05:08</sys_created_on>
+        <sys_id>a1f6f0cf597863007f4453b0df16e9d1</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Submit Training Course Feedback</sys_name>
+        <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+        <sys_update_name>sc_cat_item_producer_a1f6f0cf597863007f4453b0df16e9d1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-07 15:43:28</sys_updated_on>
+        <table_name>x_snc_train_feedbk_feedback</table_name>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <view/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_producer>
+    <sys_translated_text action="delete_multiple" query="documentkey=a1f6f0cf597863007f4453b0df16e9d1"/>
+    <fx_price action="delete_multiple" query="id=a1f6f0cf597863007f4453b0df16e9d1"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>a1f6f0cf597863007f4453b0df16e9d1</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 13:05:08</sys_created_on>
+        <sys_id>65f6f0cf597863007f4453b0df16e9d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-01 13:05:08</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>a1f6f0cf597863007f4453b0df16e9d1</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 13:05:08</sys_created_on>
+        <sys_id>a9f6f0cf597863007f4453b0df16e9d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-01 13:05:08</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

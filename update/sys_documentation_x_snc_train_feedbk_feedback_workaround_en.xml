@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="workaround" label="Workaround Provided / Used" language="en" table="x_snc_train_feedbk_feedback">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>workaround</element>
+            <help/>
+            <hint/>
+            <label>Workaround Provided / Used</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <plural>Workaround Provided / Used</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:56:09</sys_created_on>
+            <sys_id>0c79500b597863007f4453b0df16e9e4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Workaround Provided / Used</sys_name>
+            <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_train_feedbk_feedback_workaround_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:56:09</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

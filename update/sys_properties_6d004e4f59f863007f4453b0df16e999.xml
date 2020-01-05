@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_snc_train_feedbk.instructor_instance_endpoint</name>
+        <read_roles/>
+        <suffix>instructor_instance_endpoint</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 18:26:16</sys_created_on>
+        <sys_id>6d004e4f59f863007f4453b0df16e999</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_snc_train_feedbk.instructor_instance_endpoint</sys_name>
+        <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+        <sys_update_name>sys_properties_6d004e4f59f863007f4453b0df16e999</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-01 20:40:08</sys_updated_on>
+        <type>string</type>
+        <value>/api/now/table/x_snc_train_feedbk_feedback?sysparm_fields=short_description,description,agile_product,defect_type,lab_name,instructor_email,agile_product_release,module_number,page_number,submitter_name,submitter_email,priority</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=6d004e4f59f863007f4453b0df16e999"/>
+</record_update>

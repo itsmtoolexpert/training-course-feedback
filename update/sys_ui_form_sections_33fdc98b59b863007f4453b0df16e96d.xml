@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="33fdc98b59b863007f4453b0df16e96d" sys_domain="global" table="x_snc_train_feedbk_feedback" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 14:45:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f7fdc98b59b863007f4453b0df16e96f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_train_feedbk_feedback" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">33fdc98b59b863007f4453b0df16e96d</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">0562c9c359b863007f4453b0df16e94b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 14:45:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-03 03:11:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>75320567143823007f4499b8ba2c3e37</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_train_feedbk_feedback" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">33fdc98b59b863007f4453b0df16e96d</sys_ui_form>
+            <sys_ui_section caption="Instructor Validation" display_value="Instructor Validation" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">bd320567143823007f4499b8ba2c3e0e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 03:11:16</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 14:45:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f3fdc98b59b863007f4453b0df16e970</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_train_feedbk_feedback" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">33fdc98b59b863007f4453b0df16e96d</sys_ui_form>
+            <sys_ui_section caption="Beta Application Debug Display" display_value="Beta Application Debug Display" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">fbfdc98b59b863007f4453b0df16e96b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 03:11:16</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_snc_train_feedbk_feedback</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 14:45:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>33fdc98b59b863007f4453b0df16e96d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_train_feedbk_feedback</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+            <sys_update_name>sys_ui_form_sections_33fdc98b59b863007f4453b0df16e96d</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 14:45:47</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

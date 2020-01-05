@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_train_feedbk.ReportEnhancementToTraining</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ReportEnhancementToTraining</name>
+        <script><![CDATA[var ReportEnhancementToTraining = Class.create();
+ReportEnhancementToTraining.prototype = {
+    initialize: function(current) {
+		this.current = current || false;
+		this.request = new sn_ws.RESTMessageV2();
+		this.request.setLogLevel('all');
+		this.json = new global.JSON();
+		this.prefix = "x_snc_train_feedbk";
+    },
+	setCurrent : function(current){
+		this.current = current;
+	},
+	sendToTraining : function(current){
+		
+		var worknotes_list_entry_to_send = '';
+		
+		if (this.current.instructor_watch_list == true) {
+			worknotes_list_entry_to_send = this.current.instructor_email.toString();
+		}
+		
+		var body = {
+			u_short_description : this.current.short_description.toString(),
+			u_description : this.current.description.toString(),
+			u_product : this.current.agile_product.toString(),
+			u_release : this.current.agile_product_release.toString(),
+			u_enhancement_location : this.current.defect_location.toString(),
+			u_lab_reference : this.current.lab_name.toString(),
+			u_instructor : this.current.instructor_email.toString(),
+			u_module : this.current.module_number.toString(),
+			u_page : this.current.page_number.toString(),
+			u_source_instance_url : this.current.source_instance_url.toString(),
+			u_submitter_email : this.current.submitter_email.toString(),
+			u_submitter_name : this.current.submitter_name.toString(),
+			u_priority : this.current.priority.toString(),
+			u_workaround : this.current.workaround.toString(),
+			u_work_notes_list : worknotes_list_entry_to_send,
+			u_assigned_to : this.getProperty(this.prefix + ".curriculum_developer"),
+			u_submission_timestamp : this.current.submission_timestamp.toString(),
+			u_validation_timestamp : this.current.validation_timestamp.toString()
+		};
+		gs.info("Stacey: body (product and release are not making it to training instance) - " + body);
+		this.setEndpoint();
+		this.setMethod("POST");
+		this.setBasicAuth();
+		this.setRequestHeader("Accept","application/json");
+		this.setRequestHeader("Content-Type","application/json");
+		this.setRequestBody(body);
+		var response = this.request.executeAsync();
+		this.log(response.getErrorMessage());
+		this.log(response.getStatusCode());
+	},
+	setRequestBody : function(body){
+		var bodyStr = this.json.encode(body);
+		this.request.setRequestBody(bodyStr);
+	},
+	setEndpoint : function(){
+		var instanceName = this.getProperty("instance_name");
+		var defectEndPoint = this.getProperty(this.prefix + ".enhancement_endpoint");
+		this.request.setEndpoint(defectEndPoint);
+	},
+	setMethod : function(method){
+		this.request.setHttpMethod(method);
+	},
+	setBasicAuth : function(){
+		var userName = this.getProperty(this.prefix + ".integrationUsername","admin");
+		var password = this.getProperty(this.prefix + ".integrationpassword","admin");
+		this.request.setBasicAuth(userName, password);
+	},
+	setRequestHeader : function(name, value){
+		this.request.setRequestHeader(name, value);
+	},
+	log : function(message){
+		if(this.getProperty(this.prefix + ".log",true)){
+			var gdt = new GlideDateTime();
+			gs.info(gdt.getNumericValue() + "\n" + message);
+		}
+	},
+	getProperty : function(name, alt){
+		return gs.getProperty(name,alt);
+	},
+	encodeCR : function(str){
+		return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r");
+	},
+    type: 'ReportEnhancementToTraining'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 16:58:11</sys_created_on>
+        <sys_id>5f4c6d8759f863007f4453b0df16e901</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>ReportEnhancementToTraining</sys_name>
+        <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+        <sys_update_name>sys_script_include_5f4c6d8759f863007f4453b0df16e901</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-05 22:24:06</sys_updated_on>
+    </sys_script_include>
+</record_update>

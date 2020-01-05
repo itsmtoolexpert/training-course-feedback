@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="defect_type" table="x_snc_train_feedbk_feedback" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Content - Confusing / Unclear</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:41:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>47061c87597863007f4453b0df16e9fe</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:44:38</sys_updated_on>
+            <value>content_confusing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Content - Incomplete</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:42:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c5365c87597863007f4453b0df16e909</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:44:47</sys_updated_on>
+            <value>content_incomplete</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Content - Incorrect / Inaccurate</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:42:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a126d887597863007f4453b0df16e9cf</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:44:41</sys_updated_on>
+            <value>content_incorrect</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Content - Insufficient</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:42:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>75469c87597863007f4453b0df16e926</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:44:55</sys_updated_on>
+            <value>content_insufficient</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Content - Outdated</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:42:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1c669c87597863007f4453b0df16e952</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:44:58</sys_updated_on>
+            <value>content_outdated</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Content - Spelling, Grammar, or Formatting</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-05 13:01:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>819cdd98e10d23007f4495248c06b22b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-05 13:01:54</sys_updated_on>
+            <value>content_proofing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Environment - Resource Errors</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:44:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>eeb6dc87597863007f4453b0df16e915</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:45:28</sys_updated_on>
+            <value>environment_errors</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Environment - Performance Issues (other systems used in the course)</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:45:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f0c610c7597863007f4453b0df16e928</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:46:21</sys_updated_on>
+            <value>environment_performance</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Environment - Resource Unavailable</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:44:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>73769c87597863007f4453b0df16e955</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:45:12</sys_updated_on>
+            <value>environment_unavailable</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Instance - Configuration Errors</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:43:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d6665c87597863007f4453b0df16e9ae</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:45:02</sys_updated_on>
+            <value>instance_configuration</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Instance - Performance</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:45:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4a0710c7597863007f4453b0df16e9ae</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:46:03</sys_updated_on>
+            <value>instance_performance</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>defect_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other (Please Specify)</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-03 03:03:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0460c927143823007f4499b8ba2c3e6c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 03:03:34</sys_updated_on>
+            <value>other</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>defect_type</element>
+            <name>x_snc_train_feedbk_feedback</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-01 10:41:47</sys_created_on>
+            <sys_id>72003b9ca58123007f44d90b4bdec3c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>defect_type</sys_name>
+            <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+            <sys_update_name>sys_choice_x_snc_train_feedbk_feedback_defect_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-01 10:41:47</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

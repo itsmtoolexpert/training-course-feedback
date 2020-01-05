@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="defect_type_other" label="Other" language="en" table="x_snc_train_feedbk_feedback">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>defect_type_other</element>
+            <help/>
+            <hint/>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_snc_train_feedbk_feedback</name>
+            <plural>Others</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-03 03:04:36</sys_created_on>
+            <sys_id>ccb00d27143823007f4499b8ba2c3ee8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Other</sys_name>
+            <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_train_feedbk_feedback_defect_type_other_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 03:04:36</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

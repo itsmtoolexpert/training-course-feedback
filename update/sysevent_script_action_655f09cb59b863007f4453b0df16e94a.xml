@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_snc_train_feedbk.submit_to_instructor</event_name>
+        <name>Report Feedback to Instructor</name>
+        <order>100</order>
+        <script><![CDATA[var report = new ReportFeedbackToInstructor(current);
+report.sendToInstructor(current);
+current.state = -5; //Pending Validation
+current.update();]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 14:52:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>655f09cb59b863007f4453b0df16e94a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Report Feedback to Instructor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+        <sys_update_name>sysevent_script_action_655f09cb59b863007f4453b0df16e94a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-01 15:05:52</sys_updated_on>
+    </sysevent_script_action>
+</record_update>

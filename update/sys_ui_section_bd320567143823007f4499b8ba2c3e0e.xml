@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Instructor Validation" section_id="bd320567143823007f4499b8ba2c3e0e" sys_domain="global" table="x_snc_train_feedbk_feedback" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>defect_type</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-03 03:21:32</sys_created_on>
+            <sys_id>449441a7143823007f4499b8ba2c3efd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Instructor Validation" display_value="Instructor Validation" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">bd320567143823007f4499b8ba2c3e0e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 03:21:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>defect_type_other</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-03 03:21:32</sys_created_on>
+            <sys_id>0c9441a7143823007f4499b8ba2c3efd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Instructor Validation" display_value="Instructor Validation" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">bd320567143823007f4499b8ba2c3e0e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 03:21:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>workaround</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-03 03:21:32</sys_created_on>
+            <sys_id>8c9441a7143823007f4499b8ba2c3efd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Instructor Validation" display_value="Instructor Validation" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">bd320567143823007f4499b8ba2c3e0e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 03:21:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>instructor_watch_list</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-03 03:21:32</sys_created_on>
+            <sys_id>009441a7143823007f4499b8ba2c3efe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Instructor Validation" display_value="Instructor Validation" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">bd320567143823007f4499b8ba2c3e0e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 03:21:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>instructor_email</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-03 03:21:32</sys_created_on>
+            <sys_id>809441a7143823007f4499b8ba2c3efe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Instructor Validation" display_value="Instructor Validation" name="x_snc_train_feedbk_feedback" sys_domain="global" view="Default view">bd320567143823007f4499b8ba2c3e0e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 03:21:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Instructor Validation</caption>
+            <header>false</header>
+            <name>x_snc_train_feedbk_feedback</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-03 03:11:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bd320567143823007f4499b8ba2c3e0e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Instructor Validation</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+            <sys_update_name>sys_ui_section_bd320567143823007f4499b8ba2c3e0e</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-03 03:11:16</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

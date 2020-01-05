@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_train_feedbk.ReportFeedbackToInstructor</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ReportFeedbackToInstructor</name>
+        <script><![CDATA[var ReportFeedbackToInstructor = Class.create();
+ReportFeedbackToInstructor.prototype = {
+    initialize: function(current) {
+		this.current = current || false;
+		this.request = new sn_ws.RESTMessageV2();
+		this.request.setLogLevel('all');
+		this.json = new global.JSON();
+		this.prefix = "x_snc_train_feedbk";
+    },
+	setCurrent : function(current){
+		this.current = current;
+	},
+	sendToInstructor : function(current){
+		var body = {
+			short_description : this.current.short_description.toString(),
+			description : this.current.description.toString(),
+ 			agile_product : this.current.agile_product.toString(),
+			agile_product_release : this.current.agile_product_release.toString(),
+ 			feedback_type : this.current.feedback_type.toString(),
+			defect_location : this.current.defect_location.toString(),
+			lab_name : this.current.lab_name.toString(),
+			instructor : this.current.instructor_email.toString(),
+			module_number : this.current.module_number.toString(),
+			page_number : this.current.page_number.toString(),
+			source_instance_url : this.current.source_instance_url.toString().replace(".com/",".com"),
+			submitter_email : this.current.submitter_email.toString(),
+			submitter_name : this.current.submitter_name.toString(),
+			submission_timestamp : this.current.submission_timestamp.toString(),
+			workaround : this.current.workaround.toString(),
+			priority : this.current.priority.toString()
+		};
+		this.setEndpoint();
+		this.setMethod("POST");
+		this.setBasicAuth();
+		this.setRequestHeader("Accept","application/json");
+		this.setRequestHeader("Content-Type","application/json");
+		this.setRequestBody(body);
+		var response = this.request.executeAsync();
+		this.log(response.getErrorMessage());
+		this.log(response.getStatusCode());
+	},
+	setRequestBody : function(body){
+		var bodyStr = this.json.encode(body);
+		this.request.setRequestBody(bodyStr);
+	},
+	setEndpoint : function(){
+		var instanceName = this.getProperty("instance_name");
+		var instructorEndPoint = this.getProperty(this.prefix + '.instructor_instance_endpoint');
+		var	instructorInstanceName = instanceName;
+		if (instanceName.indexOf("instructor") == -1) {
+			instructorInstanceName = instanceName.substring(0, instanceName.length - 3) + "001-instructor";
+		}
+		this.request.setEndpoint("https://" + instructorInstanceName + ".lab.service-now.com" + instructorEndPoint);
+	},
+	setMethod : function(method){
+		this.request.setHttpMethod(method);
+	},
+	setBasicAuth : function(){
+		var userName = this.getProperty(this.prefix + ".integrationUsername","admin");
+		var password = this.getProperty(this.prefix + ".integrationpassword","admin");
+		this.request.setBasicAuth(userName, password);
+	},
+	setRequestHeader : function(name, value){
+		this.request.setRequestHeader(name, value);
+	},
+	log : function(message){
+		if(this.getProperty(this.prefix + ".log",true)){
+			var gdt = new GlideDateTime();
+			gs.info(gdt.getNumericValue() + "\n" + message);
+		}
+	},
+	getProperty : function(name, alt){
+		return gs.getProperty(name,alt);
+	},
+	encodeCR : function(str){
+		return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r");
+	},
+    type: 'ReportFeedbackToInstructor'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 15:05:33</sys_created_on>
+        <sys_id>0b401dcb59b863007f4453b0df16e9db</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>ReportFeedbackToInstructor</sys_name>
+        <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+        <sys_update_name>sys_script_include_0b401dcb59b863007f4453b0df16e9db</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-07 15:52:50</sys_updated_on>
+    </sys_script_include>
+</record_update>

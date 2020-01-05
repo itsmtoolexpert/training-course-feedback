@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_train_feedbk.ReportDefectToTraining</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ReportDefectToTraining</name>
+        <script><![CDATA[var ReportDefectToTraining = Class.create();
+ReportDefectToTraining.prototype = {
+	initialize: function(current) {
+		this.current = current || false;
+		this.request = new sn_ws.RESTMessageV2();
+		this.request.setLogLevel('all');
+		this.json = new global.JSON();
+		this.prefix = "x_snc_train_feedbk";
+	},
+	setCurrent : function(current){
+		this.current = current;
+	},
+	sendToTraining : function(current){
+		
+		var defect_type_to_send = this.current.defect_type.toString();
+		
+		if (this.current.defect_type.toString() == "other") {
+			defect_type_to_send = this.current.defect_type_other.getDisplayValue().toString();
+		}
+		
+		var worknotes_list_entry_to_send = '';
+		
+		if (this.current.instructor_watch_list == true) {
+			worknotes_list_entry_to_send = this.current.instructor_email.toString();
+		}
+		
+		var body = {
+			u_short_description : this.current.short_description.toString(),
+			u_description : this.current.description.toString(),
+			u_product : this.current.agile_product.toString(),
+			u_version : this.current.agile_product_release.toString(),
+			u_defect_type : defect_type_to_send,
+			u_defect_location : this.current.defect_location.toString(),
+			u_lab_reference : this.current.lab_name.toString(),
+			u_instructor : this.current.instructor_email.toString(),
+			u_module : this.current.module_number.toString(),
+			u_page : this.current.page_number.toString(),
+			u_source_instance_url : this.current.source_instance_url.toString(),
+			u_submitter_email : this.current.submitter_email.toString(),
+			u_submitter_name : this.current.submitter_name.toString(),
+			u_original_submission_date : this.current.submission_timestamp.toString(),
+			u_instructor_validation_date : this.current.validation_timestamp.toString(),
+			u_priority : this.current.priority.toString(),
+			u_workaround : this.current.workaround.toString(),
+			u_work_notes_list : worknotes_list_entry_to_send,
+			u_assigned_to : this.getProperty(this.prefix + ".curriculum_developer")
+		};
+		
+		this.setEndpoint();
+		this.setMethod("POST");
+		this.setBasicAuth();
+		this.setRequestHeader("Accept","application/json");
+		this.setRequestHeader("Content-Type","application/json");
+		this.setRequestBody(body);
+		var response = this.request.executeAsync();
+		this.log(response.getErrorMessage());
+		this.log(response.getStatusCode());
+	},
+	setRequestBody : function(body){
+		var bodyStr = this.json.encode(body);
+		this.request.setRequestBody(bodyStr);
+	},
+	setEndpoint : function(){
+		var instanceName = this.getProperty("instance_name");
+		var defectEndPoint = this.getProperty(this.prefix + ".defect_endpoint");
+		this.request.setEndpoint(defectEndPoint);
+	},
+	setMethod : function(method){
+		this.request.setHttpMethod(method);
+	},
+	setBasicAuth : function(){
+		var userName = this.getProperty(this.prefix + ".integrationUsername","admin");
+		var password = this.getProperty(this.prefix + ".integrationpassword","admin");
+		this.request.setBasicAuth(userName, password);
+	},
+	setRequestHeader : function(name, value){
+		this.request.setRequestHeader(name, value);
+	},
+	log : function(message){
+		if(this.getProperty(this.prefix + ".log",true)){
+			var gdt = new GlideDateTime();
+			gs.info(gdt.getNumericValue() + "\n" + message);
+		}
+	},
+	getProperty : function(name, alt){
+		return gs.getProperty(name,alt);
+	},
+	encodeCR : function(str){
+		return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r");
+	},
+	type: 'ReportDefectToTraining'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 15:46:33</sys_created_on>
+        <sys_id>6a2b190359f863007f4453b0df16e95d</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>ReportDefectToTraining</sys_name>
+        <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+        <sys_update_name>sys_script_include_6a2b190359f863007f4453b0df16e95d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-05 13:08:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <description/>
+        <event_name>x_snc_train_feedbk.submit_to_curriculum</event_name>
+        <fired_by>UI Action on Training Course Feedback table</fired_by>
+        <queue/>
+        <suffix>submit_to_curriculum</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 14:51:10</sys_created_on>
+        <sys_id>b81f85cb59b863007f4453b0df16e9c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_train_feedbk.submit_to_curriculum</sys_name>
+        <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+        <sys_update_name>sysevent_register_b81f85cb59b863007f4453b0df16e9c9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-01 14:51:10</sys_updated_on>
+        <table/>
+    </sysevent_register>
+</record_update>

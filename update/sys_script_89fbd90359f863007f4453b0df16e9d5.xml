@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_train_feedbk_feedback</collection>
+        <condition>(gs.getProperty('glide.servlet.uri').indexOf("instructor") !=-1) &amp;&amp; current.submitter_name.nil()</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Populate Submitter Name Email Lab Ref</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+	//look up student lab reservation to get student name and email
+	var gr = new GlideRecord("u_reserved_instance");
+	gr.addQuery("u_url", current.source_instance_url);
+	gr.query();
+	if (gr.next()) {
+		current.submitter_name = gr.u_first_name + " " + gr.u_last_name;
+		current.submitter_email = gr.u_email_address;
+	}
+	
+	//get the clabs lab name where we can look up additional information about the class and configuration
+	current.lab_name = gs.getProperty("klabs.classname");
+	
+	//populate the instructor email if available. This property will be set on first use when validating a defect until it is set automatically from clabs.
+	
+	var instructor_email_from_property = gs.getProperty('x_snc_train_feedbk.instructor_email');
+	if (instructor_email_from_property != '') {
+		current.instructor_email = instructor_email_from_property;
+	}
+	//current.update();
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 15:47:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>89fbd90359f863007f4453b0df16e9d5</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Populate Submitter Name Email Lab Ref</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Course Feedback" source="x_snc_train_feedbk">5db21047597863007f4453b0df16e9cb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Course Feedback">5db21047597863007f4453b0df16e9cb</sys_scope>
+        <sys_update_name>sys_script_89fbd90359f863007f4453b0df16e9d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-07 15:51:18</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=89fbd90359f863007f4453b0df16e9d5"/>
+</record_update>
